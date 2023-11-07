@@ -10,15 +10,15 @@ The [policy library](./lib) includes over 20 policies that detect identities pos
 1. Clone the repository:
 
     ```shell
-    git clone https://github.com/PaloAltoNetworks/rbac-police && cd rbac-police
+    git clone https://github.com/yuvalavra/rbac-police && cd rbac-police
     ```
 2. Either install `rbac-police` from a release:
 
     ```shell
     OS=linux  # OS=darwin
     ARCH=amd64  # ARCH=arm64
-    LATEST_TAG=$(curl -s https://api.github.com/repos/PaloAltoNetworks/rbac-police/releases/latest | jq -r '.tag_name')
-    curl -L -o rbac-police "https://github.com/PaloAltoNetworks/rbac-police/releases/download/${LATEST_TAG}/rbac-police_${LATEST_TAG}_${OS}_${ARCH}" && chmod +x rbac-police
+    LATEST_TAG=$(curl -s https://api.github.com/repos/yuvalavra/rbac-police/releases/latest | jq -r '.tag_name')
+    curl -L -o rbac-police "https://github.com/yuvalavra/rbac-police/releases/download/${LATEST_TAG}/rbac-police_${LATEST_TAG}_${OS}_${ARCH}" && chmod +x rbac-police
     ```
     Or build it with [Golang](https://go.dev/doc/install)>=1.16:
     
