@@ -15,4 +15,12 @@ evaluateRoles(roles, owner) {
   pb.valueOrWildcard(rule.resources, "secrets")
   pb.valueOrWildcard(rule.verbs, "list")
   pb.valueOrWildcard(rule.apiGroups, "")
+  resourceNamesNotExistOrContainEmptyItem(rule)
 } 
+
+resourceNamesNotExistOrContainEmptyItem(rule) {
+  not pb.hasKey(rule, "resourceNames")
+} {
+  pb.hasKey(rule, "resourceNames")
+  "" in rule.resourceNames
+}
